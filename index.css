@@ -1,0 +1,264 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid rgb(12, 109, 12);
+    background-color:#B60000;
+    padding: 10px;
+
+}
+nav{
+    display: flex;
+}
+.navMenu{
+    list-style-type: none;
+    display: flex;
+    
+}
+li.menu{
+    margin: 10px;
+}
+a.linkMenu {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+a.linkMenu:hover {
+    background-color: yellow;
+    box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+    -webkit-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+    -moz-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.produtosdestaque{
+    display: flex;
+    justify-content: space-between;
+      
+}
+.produtos{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px;
+    background-color: rgba(255, 255, 0, 0.673);
+    width: 100vh;
+}
+.nomeProdutos {
+    text-align: center;
+    background-color: #f2b02cb7;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+img.produtosPizza {
+    border-radius: 156px;
+    width: 54%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+p.infoProdutos{
+    padding: 10px;
+    line-height: 25px;;
+    background-color: #f2b02cb7;
+}
+p.preço{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #FF8D22;
+    width: max-content;
+
+}
+.cardapio-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.produtosc{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 0, 0.673);
+    
+}
+.produtosc:hover{
+    border: 0,5px solid black;
+    box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+    -webkit-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+    -moz-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
+}
+p.nome {
+    background-color: #f2b02cb7;
+    width: max-content;
+    padding: 10px;
+    border-radius: 15px;
+}
+p.info{
+    padding: 10px;
+    background-color: #FF8D22;
+    margin: 5px;
+    border-radius: 10px;
+}
+p.preco {
+    background-color: #f2b02cb7;
+    width: max-content;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #b60000;
+    background: linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
+    background: -webkit-linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
+    background: -moz-linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
+    border-top: 3px solid rgb(12, 109, 12);
+    padding: 10px;
+        
+}
+
+.footerimg{
+    max-width: 25px;
+    margin: 5px;
+}
+.footerTxt{
+    line-height: 20px;
+    margin: 5px;
+   
+}
+
+.principalTxt{
+    font-size: xx-large;
+    padding: 15px;
+    width: max-content;
+    background-color: yellow;
+    color: black;
+    
+}
+
+.secondtxt{
+    color: white;
+}
+
+.txtcheck{
+    color: white;
+}
+
+.email{
+    display: flex;
+    background-color: yellow;
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.telF{
+    display: flex;
+    background-color:  yellow;
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.botaofo {
+    padding: 14px;
+    width: 268px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+}
+.botaofo:hover{
+   border: 1px solid white;
+}
+.tituloForm{
+    background-color: yellow;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+    
+
+}
+.input{
+    margin: 0px 0px 15px 0px;
+    
+ }
+ input#nome {
+     margin-top: 10px;
+     border: none;
+     padding: 15px;
+     text-align: center;
+     width: 237px;
+ 
+ }
+ input#sobrenome {
+     border: none;
+     padding: 15px;
+     text-align: center;
+     width: 237px;
+ }
+ input#emails {
+     border: none;
+     padding: 15px;
+     text-align: center;
+     width: 237px;
+ }
+ input#numerotelefone {
+     border: none;
+     padding: 15px;
+     text-align: center;
+     width: 237px;
+ }
+ .botaoF{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+   
