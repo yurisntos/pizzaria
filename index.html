@@ -5,34 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projeto</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" >
 </head>
 <body>
     <header>
-        <div class="logo">        
-        <img src="imagens para projeto/pizza icon.png" alt="pizza" class="logo">
+        <div class="HeaderContainer">        
+        <img src="imagens para projeto/pizza icon.png" alt="pizza" class="header__img--icon">
         </div>
         <nav>
             <ul class="navMenu">
-                <li class="menu">
-                    <a class="linkMenu" href="#"> Cardápio</a>
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#"> Cardápio</a>
                 </li>
-                <li class="menu">
-                    <a class="linkMenu" href="#">Contatos</a>  
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#">Contatos</a>  
                 </li>
-                <li class="menu">
-                    <a class="linkMenu" href="#">Faça parte da nossa equipe</a>  
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#">Faça parte da nossa equipe</a>  
                 </li>
             </ul>
         </nav>
     </header>
 <main>
-    <div class="produtosdestaque">
+    <div class="produtos__container">
+        //render 
         <div class="produtos">
-            <h2 class="nomeProdutos">Produto 1</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtosPizza" alt="pizza calabresa">
-            <p class="infoProdutos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, quisquam? Accusamus provident dolorem harum sit? Numquam asperiores pariatur aliquam, quaerat commodi accusantium, amet, optio consequatur deserunt consectetur sapiente natus est.</p>
-            <p class="preço">$60</p>
+            <h2 class="produtos__nome">Produto 1</h2>
+            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
+            <p class="produtos__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, quisquam? Accusamus provident dolorem harum sit? Numquam asperiores pariatur aliquam, quaerat commodi accusantium, amet, optio consequatur deserunt consectetur sapiente natus est.</p>
+            <p class="produtos__preco">$60</p>
         </div>
         <div class="produtos">
             <h2 class="nomeProdutos">Produto 2</h2>
@@ -47,11 +48,11 @@
             <p class="preço">$60</p>
         </div>
     </div>
-    <div class="cardapio-section">
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
+    <div class="cardapio__container">
+        <div class="cardapio__produtos">
+            <p class="cardapio__nome">Nome do produto</p>
+            <p class="cardapio__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
+            <p class="cardapio__preco">$</p>
         </div>
         <div class="produtosc">
             <p class="nome">Nome do produto</p>
@@ -91,24 +92,22 @@
 --> 
 </main>
 <footer>
-    <div class="contatos">
-        <div class="footerTxt">
-        <p class="principalTxt">Contate-nos</p>
+    <div class="footer__container">
+        <div class="footer__txt">
+            <p class="footer__txt--principal">Contate-nos</p>
+            <p class="footer__txt--secondtxt">Fique a vontade para entrar em contato conosco. <br>Estamos sempre abertos para discutir novos projetos<br> ideias criativas ou oportunidades de fazer parte de suas visões.</p>
         </div>
-        <div class="footerTxt">
-        <p class="secondtxt">Fique a vontade para entrar em contato conosco. <br>Estamos sempre abertos para discutir novos projetos<br> ideias criativas ou oportunidades de fazer parte de suas visões.</p>
+        <div class="footer__email">
+            <h2 class="footer__email--title">Envie-nos</h2>
+            <img src="imagens para projeto/o-email.png" alt="iconEmail" class="footer__email--img">
         </div>
-        <div class="email">
-        <h2>Envie-nos</h2>
-        <img src="imagens para projeto/o-email.png" alt="iconEmail" class="footerimg">
-        </div>
-        <div class="telF">
-        <h2>Ligue para nós!</h2>
-        <img src="imagens para projeto/telefone.png" alt="iconTel" class="footerimg">
+        <div class="footer__telefone">
+        <h2 class="footer__telefone--title">Ligue para nós!</h2>
+        <img src="imagens para projeto/telefone.png" alt="iconTel" class="footer__telefone--img">
         </div>
     </div>
 
-    <div class="forms">
+    
     <form action="POST">
         <h1 class="tituloForm">Faça já seu pedido!</h1>
         <div class="input">
@@ -146,7 +145,7 @@
         </div>
 
     </form>
-    </div>
+    
 </footer>
 
 </body>

@@ -30,12 +30,15 @@ body {
 	line-height: 1;
 }
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: 5px solid rgb(12, 109, 12);
     background-color:#B60000;
     padding: 10px;
+}
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 
 }
 nav{
@@ -46,17 +49,17 @@ nav{
     display: flex;
     
 }
-li.menu{
+.navMenu__container{
     margin: 10px;
 }
-a.linkMenu {
+.navMenu__link {
     text-decoration: none;
     color: black;
     background-color: white;
     padding: 20px;
     border-radius: 15px;
 }
-a.linkMenu:hover {
+.navMenu:hover {
     background-color: yellow;
     box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
     -webkit-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
@@ -82,25 +85,29 @@ main{
     background-color: rgba(255, 255, 0, 0.673);
     width: 100vh;
 }
-.nomeProdutos {
+.produtos {
     text-align: center;
     background-color: #f2b02cb7;
     padding: 15px;
     margin: 0 0 20px 0;
 }
-img.produtosPizza {
+
+.produtos__img--pizza {
     border-radius: 156px;
     width: 54%;
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
 }
-p.infoProdutos{
+.produtos__nome{
+
+}
+.produtos__info{
     padding: 10px;
     line-height: 25px;;
     background-color: #f2b02cb7;
 }
-p.preço{
+.produtos__preco{
     margin: 5px;
     padding: 5px;
     border-radius: 10px;
@@ -113,7 +120,7 @@ p.preço{
     flex-direction: column;
 }
 
-.produtosc{
+.produtos__container{
     margin: 10px;
     padding: 10px;
     background-color: rgba(255, 255, 0, 0.673);
@@ -125,19 +132,19 @@ p.preço{
     -webkit-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
     -moz-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
 }
-p.nome {
+.produtos__nome {
     background-color: #f2b02cb7;
     width: max-content;
     padding: 10px;
     border-radius: 15px;
 }
-p.info{
+.protudos__info{
     padding: 10px;
     background-color: #FF8D22;
     margin: 5px;
     border-radius: 10px;
 }
-p.preco {
+.produtos__preco {
     background-color: #f2b02cb7;
     width: max-content;
     padding: 10px;
@@ -156,8 +163,21 @@ footer{
     padding: 10px;
         
 }
+footer__txt{
 
-.footerimg{
+}
+.footer__txt--principal{
+    font-size: xx-large;
+    padding: 15px;
+    width: max-content;
+    background-color: yellow;
+    color: black;
+
+}
+.footer__txt--secondtxt{
+    color: white;
+}
+.footer__email--img{
     max-width: 25px;
     margin: 5px;
 }
@@ -167,24 +187,11 @@ footer{
    
 }
 
-.principalTxt{
-    font-size: xx-large;
-    padding: 15px;
-    width: max-content;
-    background-color: yellow;
-    color: black;
-    
-}
-
-.secondtxt{
-    color: white;
-}
-
 .txtcheck{
     color: white;
 }
 
-.email{
+.footer__email{
     display: flex;
     background-color: yellow;
     width: max-content;
@@ -195,7 +202,7 @@ footer{
     padding: 5px;
     cursor: pointer;
 }
-.telF{
+.footer__telefone{
     display: flex;
     background-color:  yellow;
     width: max-content;
@@ -205,6 +212,12 @@ footer{
     margin: 5px;
     padding: 5px;
     cursor: pointer;
+}
+.footer__telefone--title{
+
+}
+.footer__telefone--img{
+
 }
 .botaofo {
     padding: 14px;
