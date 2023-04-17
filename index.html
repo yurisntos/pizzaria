@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projeto</title>
-    <link rel="stylesheet" href="index.css" >
+    <link rel="stylesheet" href="styles/globais.css" >
+    <link rel="stylesheet" href="styles/index.css" >
 </head>
 <body>
     <header>
-        <div class="HeaderContainer">        
+        <div class="HeaderContainer">  
+            <div class="headerContainer__img">    
         <img src="imagens para projeto/pizza icon.png" alt="pizza" class="header__img--icon">
-        </div>
+        </div>      
+   
         <nav>
             <ul class="navMenu">
                 <li class="navMenu__container">
@@ -21,14 +24,15 @@
                     <a class="navMenu__link" href="#">Contatos</a>  
                 </li>
                 <li class="navMenu__container">
-                    <a class="navMenu__link" href="#">Faça parte da nossa equipe</a>  
+                    <a class="navMenu__link" href="#">Faça parte </a>  
                 </li>
             </ul>
         </nav>
+    </div>
     </header>
 <main>
     <div class="produtos__container">
-        //render 
+    
         <div class="produtos">
             <h2 class="produtos__nome">Produto 1</h2>
             <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
@@ -36,16 +40,16 @@
             <p class="produtos__preco">$60</p>
         </div>
         <div class="produtos">
-            <h2 class="nomeProdutos">Produto 2</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtosPizza"  alt="pizza">
-            <p class="infoProdutos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet adipisci nemo magni, libero harum vitae nobis laborum ipsum fugit eos quisquam necessitatibus quibusdam, similique cumque nulla facere, nesciunt dolores doloremque?</p>
-            <p class="preço">$45</p>
+            <h2 class="produtos__nome">Produto 2</h2>
+            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
+            <p class="produtos__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet adipisci nemo magni, libero harum vitae nobis laborum ipsum fugit eos quisquam necessitatibus quibusdam, similique cumque nulla facere, nesciunt dolores doloremque?</p>
+            <p class="produtos__preco">$45</p>
         </div>
         <div class="produtos">
-            <h2 class="nomeProdutos">Produto 3</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtosPizza"  alt="pizza">
-            <p class="infoProdutos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque ea voluptatibus officiis, odit voluptatem nesciunt accusantium libero. Nulla corporis voluptatum blanditiis nam vitae omnis doloribus aperiam doloremque dolorum incidunt.</p>
-            <p class="preço">$60</p>
+            <h2 class="produtos__nome">Produto 3</h2>
+            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
+            <p class="produtos__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque ea voluptatibus officiis, odit voluptatem nesciunt accusantium libero. Nulla corporis voluptatum blanditiis nam vitae omnis doloribus aperiam doloremque dolorum incidunt.</p>
+            <p class="produtos__preco">$60</p>
         </div>
     </div>
     <div class="cardapio__container">
@@ -102,7 +106,7 @@
             <img src="imagens para projeto/o-email.png" alt="iconEmail" class="footer__email--img">
         </div>
         <div class="footer__telefone">
-        <h2 class="footer__telefone--title">Ligue para nós!</h2>
+        <h2 class="footer__telefone--title">Ligue para nós</h2>
         <img src="imagens para projeto/telefone.png" alt="iconTel" class="footer__telefone--img">
         </div>
     </div>
@@ -110,20 +114,20 @@
     
     <form action="POST">
         <h1 class="tituloForm">Faça já seu pedido!</h1>
-        <div class="input">
-            <input type="text"placeholder="Digite seu nome" name="nome" id="nome">
+        <div class="inputFooter">
+            <input type="text"placeholder="Digite seu nome" name="nome" class="nome inputStyle ">
             
         </div>
-        <div class="input">
-            <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" id="sobrenome">
+        <div class="inputFooter">
+            <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" class="sobrenome inputStyle">
             
         </div>
-        <div class="input">
-            <input type="email" placeholder="Informe-nos seu e-mail" name="email" id="emails">
+        <div class="inputFooter">
+            <input type="email" placeholder="Informe-nos seu e-mail" name="email" class="emails inputStyle">
             
         </div>
-        <div class="input">
-            <input type="tel" placeholder="Digite seu telefone" name="telefone" id="numerotelefone">
+        <div class="inputFooter">
+            <input type="tel" placeholder="Digite seu telefone" name="telefone" class="numerotelefone inputStyle">
             
         </div>
         <!-- <div class="inputDate">

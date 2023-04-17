@@ -34,38 +34,35 @@ header{
     background-color:#B60000;
     padding: 10px;
 }
-.headerContainer{
+.HeaderContainer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
-
+    justify-content: space-between;
 }
+.header__img--icon{
+    width: 100px;
+}
+
 nav{
     display: flex;
 }
 .navMenu{
     list-style-type: none;
     display: flex;
-    
+    gap: 8px;
+ 
 }
 .navMenu__container{
-    margin: 10px;
+   
 }
 .navMenu__link {
     text-decoration: none;
     color: black;
     background-color: white;
-    padding: 20px;
     border-radius: 15px;
-}
-.navMenu:hover {
-    background-color: yellow;
-    box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
-    -webkit-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
-    -moz-box-shadow: 14px 14px 20px 3px rgba(0,0,0,0.85);
     
 }
+
 main{
     display: flex;
     flex-direction: column;
@@ -88,8 +85,9 @@ main{
 .produtos {
     text-align: center;
     background-color: #f2b02cb7;
-    padding: 15px;
-    margin: 0 0 20px 0;
+    
+    min-width: fit-content;
+    width: fit-content;
 }
 
 .produtos__img--pizza {
@@ -120,11 +118,11 @@ main{
     flex-direction: column;
 }
 
-.produtos__container{
-    margin: 10px;
+.produtos__container {
     padding: 10px;
     background-color: rgba(255, 255, 0, 0.673);
-    
+    display: flex;
+    overflow: auto;
 }
 .produtosc:hover{
     border: 0,5px solid black;
@@ -166,13 +164,12 @@ footer{
 footer__txt{
 
 }
-.footer__txt--principal{
-    font-size: xx-large;
-    padding: 15px;
+.footer__txt--principal {
+    font-size: x-large;
+    padding: 2px;
     width: max-content;
     background-color: yellow;
     color: black;
-
 }
 .footer__txt--secondtxt{
     color: white;
@@ -191,7 +188,7 @@ footer__txt{
     color: white;
 }
 
-.footer__email{
+.footer__email {
     display: flex;
     background-color: yellow;
     width: max-content;
@@ -199,13 +196,15 @@ footer__txt{
     align-items: center;
     border-radius: 10px;
     margin: 5px;
-    padding: 5px;
+    
     cursor: pointer;
+    
+    width: 100px;
 }
 .footer__telefone{
     display: flex;
     background-color:  yellow;
-    width: max-content;
+    width: 100px;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
@@ -214,63 +213,130 @@ footer__txt{
     cursor: pointer;
 }
 .footer__telefone--title{
-
+    line-break: anywhere;
 }
+
 .footer__telefone--img{
+    width: 2rem;
 
 }
 .botaofo {
     padding: 14px;
-    width: 268px;
+    
     background-color: yellow;
     border: none;
     cursor: pointer;
 }
-.botaofo:hover{
-   border: 1px solid white;
-}
+
 .tituloForm{
     background-color: yellow;
-    padding: 10px;
+    
     margin-top: 15px;
     font-size: 20px;
     text-align: center;
-    
 
-}
-.input{
-    margin: 0px 0px 15px 0px;
+    width: 126px;
     
- }
- input#nome {
-     margin-top: 10px;
+}
+.inputStyle{
+    margin-top: 10px;
      border: none;
      padding: 15px;
      text-align: center;
-     width: 237px;
+     width: 6rem;
+}
  
- }
- input#sobrenome {
-     border: none;
-     padding: 15px;
-     text-align: center;
-     width: 237px;
- }
- input#emails {
-     border: none;
-     padding: 15px;
-     text-align: center;
-     width: 237px;
- }
- input#numerotelefone {
-     border: none;
-     padding: 15px;
-     text-align: center;
-     width: 237px;
- }
  .botaoF{
     margin-top: 5px;
     margin-bottom: 5px;
+    
+}
+@media (min-width:750px){
+    .HeaderContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .navMenu__link {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border-radius: 15px;
+        padding: 11px;
+    }
+    .produtos__container {
+        padding: 10px;
+        background-color: rgba(255, 255, 0, 0.673);
+        display: flex;
+     
+        flex-direction: column;
+    }
+    .produtos__nome {
+        background-color: #f2b02cb7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+
+    .produtos__img--pizza {
+        border-radius: 156px;
+        width: 15rem;
+    }
+}
+@media (min-width: 1024px){
+    .HeaderContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .navMenu__link {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border-radius: 15px;
+        padding: 11px;
+    }
+    .produtos__container {
+        padding: 10px;
+        background-color: rgba(255, 255, 0, 0.673);
+        display: flex;
+        flex-direction: column;
+    }
+    .produtos__nome {
+        background-color: #f2b02cb7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+
+    .produtos__img--pizza {
+        border-radius: 156px;
+        width: 15rem;
+    }
+
+    .inputStyle{
+        margin-top: 10px;
+         border: none;
+         padding: 15px;
+         text-align: center;
+         width: 15rem;
+    }
+    .footer__txt--principal {
+        font-size: xxx-large;
+        padding: 5px;
+        width: max-content;
+        background-color: yellow;
+        color: black;
+    }
+    .tituloForm {
+        background-color: yellow;
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        width: 16.9rem;
+    }
     
 }
 
