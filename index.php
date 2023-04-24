@@ -1,3 +1,6 @@
+<?php
+    require 'scripts/helpers/importa.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,10 +12,34 @@
     <link rel="stylesheet" href="styles/index.css" >
 </head>
 <body>
+
+<style> .cardapio__container{
+    background-color: #f6c637;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    }
+    .cardapio__preco {
+    margin-left: 10px;
+    }
+    .cardapio__info {
+    margin-left: 10px;
+    }
+    .cardapio__nome {
+    font-size: large;
+    margin-left: 9px;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 17px;
+}
+
+</style>
     <header>
         <div class="HeaderContainer">  
             <div class="headerContainer__img">    
-        <img src="imagens para projeto/pizza icon.png" alt="pizza" class="header__img--icon">
+        <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
         </div>      
    
         <nav>
@@ -35,54 +62,38 @@
     
         <div class="produtos">
             <h2 class="produtos__nome">Produto 1</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
+            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
             <p class="produtos__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, quisquam? Accusamus provident dolorem harum sit? Numquam asperiores pariatur aliquam, quaerat commodi accusantium, amet, optio consequatur deserunt consectetur sapiente natus est.</p>
             <p class="produtos__preco">$60</p>
         </div>
         <div class="produtos">
             <h2 class="produtos__nome">Produto 2</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
+            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
             <p class="produtos__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet adipisci nemo magni, libero harum vitae nobis laborum ipsum fugit eos quisquam necessitatibus quibusdam, similique cumque nulla facere, nesciunt dolores doloremque?</p>
             <p class="produtos__preco">$45</p>
         </div>
         <div class="produtos">
             <h2 class="produtos__nome">Produto 3</h2>
-            <img src="imagens para projeto/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
+            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
             <p class="produtos__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque ea voluptatibus officiis, odit voluptatem nesciunt accusantium libero. Nulla corporis voluptatum blanditiis nam vitae omnis doloribus aperiam doloremque dolorum incidunt.</p>
             <p class="produtos__preco">$60</p>
         </div>
     </div>
     <div class="cardapio__container">
-        <div class="cardapio__produtos">
-            <p class="cardapio__nome">Nome do produto</p>
-            <p class="cardapio__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="cardapio__preco">$</p>
-        </div>
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
-        </div>
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
-        </div>
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
-        </div>
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
-        </div>
-        <div class="produtosc">
-            <p class="nome">Nome do produto</p>
-            <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reprehenderit fugit veniam corporis obcaecati molestias qui sed ab, magnam laudantium beatae, deserunt nostrum repudiandae iste facilis tempora excepturi eveniet? Harum.</p>
-            <p class="preco">$</p>
-        </div>
+
+
+        <?php
+
+            $produtos = listaDados('SELECT * FROM produtos');
+
+            foreach ($produtos as $produto) { ?>
+            <div class="cardapio__produtos">
+                <p class="cardapio__nome"><?= $produto['nome'] ?> </p>
+                <p class="cardapio__info"><?= $produto['descricao'] ?></p>
+
+                <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
+            </div>
+            <?php } ?>
             
     </div>
     
@@ -103,11 +114,11 @@
         </div>
         <div class="footer__email">
             <h2 class="footer__email--title">Envie-nos</h2>
-            <img src="imagens para projeto/o-email.png" alt="iconEmail" class="footer__email--img">
+            <img src="assepts/o-email.png" alt="iconEmail" class="footer__email--img">
         </div>
         <div class="footer__telefone">
         <h2 class="footer__telefone--title">Ligue para nós</h2>
-        <img src="imagens para projeto/telefone.png" alt="iconTel" class="footer__telefone--img">
+        <img src="assepts/telefone.png" alt="iconTel" class="footer__telefone--img">
         </div>
     </div>
 
@@ -117,24 +128,16 @@
         <div class="inputFooter">
             <input type="text"placeholder="Digite seu nome" name="nome" class="nome inputStyle ">
             
-        </div>
-        <div class="inputFooter">
+    
             <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" class="sobrenome inputStyle">
             
-        </div>
-        <div class="inputFooter">
+        
             <input type="email" placeholder="Informe-nos seu e-mail" name="email" class="emails inputStyle">
             
-        </div>
-        <div class="inputFooter">
+        
+        
             <input type="tel" placeholder="Digite seu telefone" name="telefone" class="numerotelefone inputStyle">
-            
-        </div>
-        <!-- <div class="inputDate">
-            <input type="date" name="datadenascimento" id="date">
-            <label for="date">Digite o ano de nascimento</label>
-        </div>
-        -->
+        
         <div class="check">
             <input type="checkbox" name="newsletter" id="newsletter">
             <label class="txtcheck" for="newsletter">Assine nosso newsletter! </label>

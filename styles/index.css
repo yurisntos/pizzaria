@@ -58,15 +58,19 @@ nav{
 .navMenu__link {
     text-decoration: none;
     color: black;
-    background-color: white;
+    background-color: #ffff00a1;
     border-radius: 15px;
-    
+    font-size: small;
+    padding: 5px;
+}
+.navMenu__link:hover{
+    background-color: yellow
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #fffe4b;
 }
 .produtosdestaque{
     display: flex;
@@ -97,9 +101,7 @@ main{
     margin: auto;
     margin-bottom: 20px;
 }
-.produtos__nome{
 
-}
 .produtos__info{
     padding: 10px;
     line-height: 25px;;
@@ -118,6 +120,11 @@ main{
     flex-direction: column;
 }
 
+
+.cardapio__nome p{
+    color: #B60000;
+   
+}
 .produtos__container {
     padding: 10px;
     background-color: rgba(255, 255, 0, 0.673);
@@ -134,7 +141,9 @@ main{
     background-color: #f2b02cb7;
     width: max-content;
     padding: 10px;
-    border-radius: 15px;
+    width: auto;
+    margin-bottom: 2rem;
+    border: 1px solid white;
 }
 .protudos__info{
     padding: 10px;
@@ -245,6 +254,10 @@ footer__txt{
      text-align: center;
      width: 6rem;
 }
+.inputFooter {
+    display: flex;
+    flex-direction: column;
+}
  
  .botaoF{
     margin-top: 5px;
@@ -259,8 +272,6 @@ footer__txt{
     }
     .navMenu__link {
         text-decoration: none;
-        color: black;
-        background-color: white;
         border-radius: 15px;
         padding: 11px;
     }
@@ -274,7 +285,7 @@ footer__txt{
     .produtos__nome {
         background-color: #f2b02cb7;
         padding: 10px;
-        border-radius: 15px;
+        
         margin-bottom: 1rem;
         width: auto;
     }
@@ -293,15 +304,17 @@ footer__txt{
     .navMenu__link {
         text-decoration: none;
         color: black;
-        background-color: white;
+        
         border-radius: 15px;
-        padding: 11px;
+        padding: 15px;
+        font-size: medium;
     }
+    
     .produtos__container {
-        padding: 10px;
-        background-color: rgba(255, 255, 0, 0.673);
-        display: flex;
-        flex-direction: column;
+    padding: 10px;
+    background-color: rgba(255, 255, 0, 0.673);
+    display: flex;
+    flex-direction: row;
     }
     .produtos__nome {
         background-color: #f2b02cb7;

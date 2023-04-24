@@ -24,3 +24,21 @@
             <?php } ?>
     </body>
 </html>
+<?php
+
+// Query para buscar o produto  pizza de Mussarela
+$sql = "SELECT * FROM produtos WHERE nome = 'Mussarela'";
+$result = $conn->query($sql);
+
+ //Exibição dos dados da pizza
+if ($result->num_rows > 0) {
+  $row = $result->fetch_assoc();
+  echo "nome: " . $row["nome"] . "<br>";
+  echo "Ingredientes: " . $row["ingredientes"] . "<br>";
+  echo "Preço: " . $row["valor"] . "<br>";
+} else {
+  echo "Nenhum resultado encontrado.";
+}
+
+$conn->close();
+?>
