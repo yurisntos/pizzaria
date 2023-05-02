@@ -33,7 +33,8 @@
     width: fit-content;
     padding: 5px;
     border-radius: 17px;
-}
+    }
+    
 
 </style>
     <header>
