@@ -1,19 +1,19 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
 <head>
-  <script src="<?= buscaUrl('admin/assets/js/color-modes.js') ?>"></script>
+  <script src="../assets/js/color-modes.js"></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.111.3">
-  <title>Pizza</title>
+  <title>Signin Template · Bootstrap v5.3</title>
 
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
-
-
-
-
-  <link href="<?= buscaUrl('admin/assets/dist/css/bootstrap.min.css') ?>" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -89,8 +89,30 @@
       z-index: 1500;
     }
   </style>
-
-
   <!-- Custom styles for this template -->
-  <link href="<?= buscaUrl('admin/dashboard.css') ?>" rel="stylesheet">
+  <link href="sign-in.css" rel="stylesheet">
 </head>
+
+<body class="text-center">
+
+  <main class="form-signin w-100 m-auto">
+    <form action="valida.php" method="POST">
+      <img class="mb-4" src="../assets/brand/pizza icon - Copia.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Faça Login</h1>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Senha</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>
+      <p class="mt-5 mb-3 text-body-secondary">&copy; Pizza - 2023</p>
+    </form>
+  </main>
+
+</body>
+
+</html>

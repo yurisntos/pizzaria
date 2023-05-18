@@ -34,6 +34,16 @@
     padding: 5px;
     border-radius: 17px;
     }
+    .cardapio__produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    }
+    button.cardapio__add {
+    border-radius: 10px;
+    border: none;
+    margin-top: 1rem;
+    }
     
 
 </style>
@@ -89,10 +99,13 @@
 
             foreach ($produtos as $produto) { ?>
             <div class="cardapio__produtos">
+                <div class="cardapio_title">
                 <p class="cardapio__nome"><?= $produto['nome'] ?> </p>
+                </div>
+                <div class="cardapio__text-infos">
                 <p class="cardapio__info"><?= $produto['descricao'] ?></p>
-
                 <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
+                </div>
             </div>
             <?php } ?>
             
@@ -124,37 +137,23 @@
     </div>
 
     
-    <form action="POST">
-        <h1 class="tituloForm">Faça já seu pedido!</h1>
-        <div class="inputFooter">
-            <input type="text"placeholder="Digite seu nome" name="nome" class="nome inputStyle ">
-            
     
-            <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" class="sobrenome inputStyle">
-            
-        
-            <input type="email" placeholder="Informe-nos seu e-mail" name="email" class="emails inputStyle">
-            
-        
-        
-            <input type="tel" placeholder="Digite seu telefone" name="telefone" class="numerotelefone inputStyle">
-        
-        <div class="check">
-            <input type="checkbox" name="newsletter" id="newsletter">
-            <label class="txtcheck" for="newsletter">Assine nosso newsletter! </label>
-        </div>
-        <div class="check">
-            <input type="checkbox" name="politica" id="politica">
-            <label  class="txtcheck" for="politica">Concordo com a politica de segurança</label>
-            
-        </div>
-        <div class="botaoF">
-        <button for="form" class="botaofo">Enviar</button>
-        </div>
+    <form action="cadastro.php" method="post">
+    <h1 class="tituloForm">Faça já seu pedido!</h1>
+      <div class="inputFooter">
+      <input type="text"placeholder="Digite seu nome" class="" name="nome" class="nome inputStyle " id="nome" required>
 
+      <input type="email"placeholder="Digite seu e-mail" name="email" id="email" class="emails inputStyle" required>
+
+      <input type="password"placeholder="digite sua senha" name="senha" id="senha"class="numerotelefone inputStyle" required>
+
+      <input type="submit" class="botaofo" value="Cadastrar">
+      </div>
+    
     </form>
     
 </footer>
+    <script type="module" src="./index.js"></script>
 
 </body>
 </html>

@@ -1,37 +1,26 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
-      <div class="position-sticky pt-3 sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="pizzas/cadastrar.php">
-              <span data-feather="home" class="align-text-bottom"></span>
-              Cadastrar Pizza
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Atualizar
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              Editar 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users" class="align-text-bottom"></span>
-              Todos 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-              Reports
-            </a>
-          </li>
-          <!--
+  <div class="position-sticky pt-3 sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="<?= buscaUrl('admin/home/index.php') ?>">
+          <span data-feather="home" class="align-text-bottom"></span>
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= buscaUrl('admin/pizza/lista.php') ?>">
+          <span data-feather="shopping-cart" class="align-text-bottom"></span>
+          Pizza
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= buscaUrl('admin/administrador/lista.php') ?>">
+          <span data-feather="users" class="align-text-bottom"></span>
+          Usuários
+        </a>
+      </li>
+
+      <!--
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="layers" class="align-text-bottom"></span>
@@ -72,6 +61,6 @@
             </a>
           </li>
           -->
-        </ul>
-      </div>
-    </nav>
+    </ul>
+  </div>
+</nav>

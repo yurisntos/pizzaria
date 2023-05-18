@@ -25,16 +25,22 @@ CREATE TABLE itenspedidos (
     valor DECIMAL(10,2) NOT NULL
 );
 
-CREATE TABLE cliente(
-    idcliente INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cliente VARCHAR(200) NOT NULL,
-    telefone INT(11) NOT NULL,
-    cpf VARCHAR(11) NOT NULL,
-    endereco TEXT NOT NULL
+CREATE TABLE administrador (
+    idadm INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL, 
+    email TEXT NULL, 
+    senha VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE usuario(
+    iduser INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL, 
+    email TEXT NULL, 
+    senha VARCHAR(50) NOT NULL
     
 );
 
-INSERT INTO produtos ( nome, descricao, valor
+INSERT INTO produtos ( nome, descricao, valor)
 VALUES
 
   ( 'Mussarela', 'Molho de tomate, queijo mussarela', 30.00),
@@ -46,5 +52,7 @@ VALUES
   ( 'Especial da casa', 'Molho de tomate, queijo mussarela, calabresa fatiada, bacon, cebola, pimentão, azeitonas', 50.00),
   ( 'Vegetariana', 'Molho de tomate, queijo mussarela, brócolis, champignon, pimentão, cebola, tomate em rodelas', 40.00),
   ( 'Pepperoni', 'Molho de tomate, queijo mussarela, pepperoni fatiado', 45.00);
-)
+
 SELECT * FROM produtos; 
+
+

@@ -167,7 +167,7 @@ footer{
     background: linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
     background: -webkit-linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
     background: -moz-linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
-    border-top: 3px solid rgb(12, 109, 12);
+    border-top: 8px solid rgb(12, 109, 12);
     padding: 10px;
         
 }
@@ -317,6 +317,11 @@ footer__txt{
     display: flex;
     flex-direction: row;
     }
+    .produtos {
+        text-align: center;
+        background-color: #f2b02cb7;
+        width: 27rem;
+    }
     .produtos__nome {
         background-color: #f2b02cb7;
         padding: 10px;
@@ -353,5 +358,3 @@ footer__txt{
     }
     
 }
-
-   
