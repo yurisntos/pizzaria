@@ -4,9 +4,17 @@
     $nome = $_POST["nome"];
     $valor = $_POST["valor"];
     $descricao = $_POST["descricao"];
-    $ingredientes = $_POST["ingredientes"];
+    $imagem = '';
 
-    $sql = "INSERT INTO produtos (nome, valor, descricao, ingredientes) VALUES (:nome, :valor, :descricao, :ingredientes)";
+    if($_FILES['foto']){
+        $nome_foto = rand(0, 99419845) .  $_FILES['foto']['name'];
+
+        if(move_uploaded_file($_FILES['foto']['tmp_name'], '../../assepts/pizzas/' . $nome_foto)){
+            $imagem = $nome_foto;
+        }
+    }
+
+    $sql = "INSERT INTO produtos (nome, valor, descricao, imagem) VALUES (:nome, :valor, :descricao, :imagem)";
     
     $resultado = $pdo->prepare($sql); 
     
@@ -14,7 +22,7 @@
         ":nome" => $nome,
         ":valor" => $valor,
         ":descricao" => $descricao,
-        
+        ":imagem" => $imagem
     ]);
     
     $id = $pdo->lastInsertId();

@@ -16,7 +16,7 @@ require '../funcoes.php';
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <h1 class="display-2">Nova Pizza</h1>
 
-                <form action="salvar.php" method="POST">
+                <form action="salvar.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="text_label" for="">Nome</label>
                         <input class="form-control" type="text" name="nome">
@@ -28,6 +28,10 @@ require '../funcoes.php';
                     <div class="mb-3">
                         <label class="text_label" for="">Descrição</label>
                         <textarea class="form-control" name="descricao"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="text_label">Imagem</label>
+                        <input type="file" name="foto" class="form-control">
                     </div>
                     <a href="lista.php">
                         <input class="btn btn-warning" type="button" value="Voltar">

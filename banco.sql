@@ -7,7 +7,7 @@ CREATE TABLE produtos (
     nome VARCHAR(200) NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
     descricao TEXT NULL,
-    ingredientes TEXT NULL
+    imagem VARCHAR(255) NULL
 ); 
 CREATE TABLE pedidos (
     idpedidos INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 

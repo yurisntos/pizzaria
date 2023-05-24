@@ -31,7 +31,7 @@ $produto = buscaItem($sql);
             <h1>Cadastro de Pizza</h1>
           </div>
         </div>
-
+        <img class="col-4" src="<?= buscaUrl('assepts/pizzas/' . $produto['imagem'] ) ?>" alt="">
         <h3><b>Nome: </b><?= $produto["nome"] ?></h3>
         <h3><b>Valor: </b><?= $produto["valor"] ?></h3>
         <h3><b>Descrição: </b><?= $produto["descricao"] ?></h3>
