@@ -57,61 +57,9 @@ require 'scripts/helpers/importa.php';
         }
     </style>
     <header>
-        <div class="HeaderContainer">  
-            <div class="headerContainer__img">    
-        <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
-        </div>      
-   
-        <nav>
-            <ul class="navMenu">
-                <li class="navMenu__container">
-                    <a class="navMenu__link" href="#"> Cardápio</a>
-                </li>
-                <li class="navMenu__container">
-                    <a class="navMenu__link" href="#">Contatos</a>  
-                </li>
-                <li class="navMenu__container">
-                    <a class="navMenu__link" href="#">Faça parte </a>  
-                </li>
-            </ul>
-        </nav>
-    </div>
-    </header>
-<main>
-
-    <div class="produtos__container">
-        <?php 
-        $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
-
-            foreach ($produtos as $produto) { ?> 
-        <div class="produtos">
-            <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
-            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-            <p class="produtos__info"><?= $produto['descricao']?> </p>
-            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
-        </div>
-
-        <?php } ?>
-
-    </div>
-
-
-    <div class="cardapio__container">
-
-
-        <?php
-
-            $produtos = listaDados('SELECT * FROM produtos');
-
-            foreach ($produtos as $produto) { ?>
-            <div class="cardapio__produtos">
-                <div class="cardapio_title">
-                <p class="cardapio__nome"><?= $produto['nome'] ?> </p>
-                </div>
-                <div class="cardapio__text-infos">
-                <p class="cardapio__info"><?= $produto['descricao'] ?></p>
-                <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
-                </div>
+        <div class="HeaderContainer">
+            <div class="headerContainer__img">
+                <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
             </div>
 
             <nav>
@@ -130,27 +78,23 @@ require 'scripts/helpers/importa.php';
         </div>
     </header>
     <main>
-        <div class="produtos__container">
 
-            <div class="produtos">
-                <h2 class="produtos__nome">Produto 1</h2>
-                <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                <p class="produtos__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, quisquam? Accusamus provident dolorem harum sit? Numquam asperiores pariatur aliquam, quaerat commodi accusantium, amet, optio consequatur deserunt consectetur sapiente natus est.</p>
-                <p class="produtos__preco">$60</p>
-            </div>
-            <div class="produtos">
-                <h2 class="produtos__nome">Produto 2</h2>
-                <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                <p class="produtos__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet adipisci nemo magni, libero harum vitae nobis laborum ipsum fugit eos quisquam necessitatibus quibusdam, similique cumque nulla facere, nesciunt dolores doloremque?</p>
-                <p class="produtos__preco">$45</p>
-            </div>
-            <div class="produtos">
-                <h2 class="produtos__nome">Produto 3</h2>
-                <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                <p class="produtos__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque ea voluptatibus officiis, odit voluptatem nesciunt accusantium libero. Nulla corporis voluptatum blanditiis nam vitae omnis doloribus aperiam doloremque dolorum incidunt.</p>
-                <p class="produtos__preco">$60</p>
-            </div>
+        <div class="produtos__container">
+            <?php
+            $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
+
+            foreach ($produtos as $produto) { ?>
+                <div class="produtos">
+                    <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
+                    <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
+                    <p class="produtos__info"><?= $produto['descricao'] ?> </p>
+                    <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
+                </div>
+
+            <?php } ?>
+
         </div>
+
         <div class="cardapio__container container my-5 p-4">
             <h1 class="display-2">Todas pizzas</h1>
             <div class="row g-3">
@@ -175,14 +119,6 @@ require 'scripts/helpers/importa.php';
 
         </div>
 
-        <!--<aside>
-        <p>PROMO</p>
-    </aside>
-     
-    section class="sobre">
-    <p>OLA</p>
-    </section>
--->
     </main>
     <footer>
         <div class="footer__container">
