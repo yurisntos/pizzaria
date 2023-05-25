@@ -57,9 +57,61 @@ require 'scripts/helpers/importa.php';
         }
     </style>
     <header>
-        <div class="HeaderContainer">
-            <div class="headerContainer__img">
-                <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
+        <div class="HeaderContainer">  
+            <div class="headerContainer__img">    
+        <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
+        </div>      
+   
+        <nav>
+            <ul class="navMenu">
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#"> Cardápio</a>
+                </li>
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#">Contatos</a>  
+                </li>
+                <li class="navMenu__container">
+                    <a class="navMenu__link" href="#">Faça parte </a>  
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+<main>
+
+    <div class="produtos__container">
+        <?php 
+        $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
+
+            foreach ($produtos as $produto) { ?> 
+        <div class="produtos">
+            <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
+            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
+            <p class="produtos__info"><?= $produto['descricao']?> </p>
+            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
+        </div>
+
+        <?php } ?>
+
+    </div>
+
+
+    <div class="cardapio__container">
+
+
+        <?php
+
+            $produtos = listaDados('SELECT * FROM produtos');
+
+            foreach ($produtos as $produto) { ?>
+            <div class="cardapio__produtos">
+                <div class="cardapio_title">
+                <p class="cardapio__nome"><?= $produto['nome'] ?> </p>
+                </div>
+                <div class="cardapio__text-infos">
+                <p class="cardapio__info"><?= $produto['descricao'] ?></p>
+                <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
+                </div>
             </div>
 
             <nav>
