@@ -79,20 +79,24 @@ require 'scripts/helpers/importa.php';
     </header>
     <main>
 
-        <div class="produtos__container">
-            <?php
-            $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
 
-            foreach ($produtos as $produto) { ?>
-                <div class="produtos">
-                    <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
-                    <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                    <p class="produtos__info"><?= $produto['descricao'] ?> </p>
-                    <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
-                </div>
+                <?php
+                $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
 
-            <?php } ?>
+                foreach ($produtos as $produto) { ?>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="produtos">
+                            <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
+                            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
+                            <p class="produtos__info"><?= $produto['descricao'] ?> </p>
+                            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
+                        </div>
+                    </div>
 
+                <?php } ?>
+            </div>
         </div>
 
         <div class="cardapio__container container my-5 p-4">
@@ -105,8 +109,11 @@ require 'scripts/helpers/importa.php';
                 foreach ($produtos as $produto) { ?>
                     <div class="col col-sm-12 col-md-6 col-lg-3">
                         <div class="cardapio__produtos card p-2">
+                            <div class="imagem d-flex justify-content-center">
+                                <img src="assepts/pizzaMenor2.jpeg" class="img-fluid" alt="pizza">
+                            </div>
                             <div class="cardapio_title">
-                                <p class="cardapio__nome"><?= $produto['nome'] ?> </p>
+                                <p class="cardapio__nome fw-bold"><?= $produto['nome'] ?> </p>
                             </div>
                             <div class="cardapio__text-infos">
                                 <p class="cardapio__info"><?= $produto['descricao'] ?></p>
