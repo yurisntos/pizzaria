@@ -69,27 +69,24 @@
     </div>
     </header>
 <main>
+
     <div class="produtos__container">
-    
+        <?php 
+        $produtos = listaDados('SELECT * FROM produtos LIMIT 3');
+
+            foreach ($produtos as $produto) { ?> 
         <div class="produtos">
-            <h2 class="produtos__nome">Produto 1</h2>
+            <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
             <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-            <p class="produtos__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, quisquam? Accusamus provident dolorem harum sit? Numquam asperiores pariatur aliquam, quaerat commodi accusantium, amet, optio consequatur deserunt consectetur sapiente natus est.</p>
-            <p class="produtos__preco">$60</p>
+            <p class="produtos__info"><?= $produto['descricao']?> </p>
+            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
         </div>
-        <div class="produtos">
-            <h2 class="produtos__nome">Produto 2</h2>
-            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
-            <p class="produtos__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet adipisci nemo magni, libero harum vitae nobis laborum ipsum fugit eos quisquam necessitatibus quibusdam, similique cumque nulla facere, nesciunt dolores doloremque?</p>
-            <p class="produtos__preco">$45</p>
-        </div>
-        <div class="produtos">
-            <h2 class="produtos__nome">Produto 3</h2>
-            <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza"  alt="pizza">
-            <p class="produtos__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque ea voluptatibus officiis, odit voluptatem nesciunt accusantium libero. Nulla corporis voluptatum blanditiis nam vitae omnis doloribus aperiam doloremque dolorum incidunt.</p>
-            <p class="produtos__preco">$60</p>
-        </div>
+
+        <?php } ?>
+
     </div>
+
+
     <div class="cardapio__container">
 
 
