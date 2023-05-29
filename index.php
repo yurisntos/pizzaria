@@ -58,6 +58,9 @@ require 'scripts/helpers/importa.php';
     </style>
     <header>
         <div class="HeaderContainer">
+            <div class="headerText">
+            <h1 class="header__text-logo">La Piazza</h1>
+            </div>
             <div class="headerContainer__img">
                 <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
             </div>
@@ -65,13 +68,16 @@ require 'scripts/helpers/importa.php';
             <nav>
                 <ul class="navMenu">
                     <li class="navMenu__container">
-                        <a class="navMenu__link" href="#"> Cardápio</a>
+                        <a class="navMenu__link" href="#cardapio__produtos card p-2r"> Cardápio</a>
                     </li>
                     <li class="navMenu__container">
-                        <a class="navMenu__link" href="#">Contatos</a>
+                        <a class="navMenu__link" href="#footer__container">Contatos</a>
                     </li>
                     <li class="navMenu__container">
-                        <a class="navMenu__link" href="#">Faça parte </a>
+                        <a class="navMenu__link" href="#footer__container">Faça parte </a>
+                    </li>
+                    <li class="navMenu__container">
+                        <a class="navMenu__link" href="./admin/login/index.php">Login</a>
                     </li>
                 </ul>
             </nav>
@@ -128,7 +134,7 @@ require 'scripts/helpers/importa.php';
 
     </main>
     <footer>
-        <div class="footer__container">
+        <div id="footer__container">
             <div class="footer__txt">
                 <p class="footer__txt--principal">Contate-nos</p>
                 <p class="footer__txt--secondtxt">Fique a vontade para entrar em contato conosco. <br>Estamos sempre abertos para discutir novos projetos<br> ideias criativas ou oportunidades de fazer parte de suas visões.</p>
@@ -148,7 +154,7 @@ require 'scripts/helpers/importa.php';
         <form action="cadastro.php" method="post">
             <h1 class="tituloForm">Faça já seu pedido!</h1>
             <div class="inputFooter">
-                <input type="text" placeholder="Digite seu nome" class="" name="nome" class="nome inputStyle " id="nome" required>
+                <input type="text" placeholder="Digite seu nome" class="inputStyle" name="nome" class="nome inputStyle " id="nome" required>
 
                 <input type="email" placeholder="Digite seu e-mail" name="email" id="email" class="emails inputStyle" required>
 

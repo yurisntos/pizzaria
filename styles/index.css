@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -42,7 +43,10 @@ header{
 .header__img--icon{
     width: 100px;
 }
-
+.header__text-logo{
+    color: white;
+    font-family: 'Climate Crisis', cursive;
+}
 nav{
     display: flex;
 }
@@ -52,9 +56,7 @@ nav{
     gap: 8px;
  
 }
-.navMenu__container{
    
-}
 .navMenu__link {
     text-decoration: none;
     color: black;
@@ -77,22 +79,18 @@ main {
     justify-content: space-between;
       
 }
-.produtos{
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 30px;
-    margin: 10px;
-    background-color: rgba(255, 255, 0, 0.673);
-    width: 100vh;
-}
 .produtos {
-    text-align: center;
-    background-color: #f2b02cb7;
-    
-    min-width: fit-content;
-    width: fit-content;
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #ffb20052;
+    height: 32rem;
 }
+
+
 
 .produtos__img--pizza {
     border-radius: 156px;
@@ -120,6 +118,15 @@ main {
     flex-direction: column;
 }
 
+.cardapio__produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-height: 20rem;
+    max-width: 10rem;
+    overflow: auto;
+}
 
 .cardapio__nome p{
     color: #B60000;
@@ -171,9 +178,7 @@ footer{
     padding: 10px;
         
 }
-footer__txt{
 
-}
 .footer__txt--principal {
     font-size: x-large;
     padding: 2px;
@@ -209,12 +214,12 @@ footer__txt{
     
     cursor: pointer;
     
-    width: 100px;
+    width: 9rem;
 }
 .footer__telefone{
     display: flex;
     background-color:  yellow;
-    width: 100px;
+    width: 9rem;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
@@ -253,8 +258,10 @@ footer__txt{
      border: none;
      padding: 15px;
      text-align: center;
-     width: 6rem;
+     width: 8rem;
+    margin-bottom: 1rem;
 }
+
 .inputFooter {
     display: flex;
     flex-direction: column;
@@ -317,19 +324,7 @@ footer__txt{
     display: flex;
     flex-direction: row;
     }
-    .produtos {
-        text-align: center;
-        background-color: #f2b02cb7;
-        width: 27rem;
-    }
-    .produtos__nome {
-        background-color: #f2b02cb7;
-        padding: 10px;
-        border-radius: 15px;
-        margin-bottom: 1rem;
-        width: auto;
-    }
-
+   
     .produtos__img--pizza {
         border-radius: 156px;
         width: 15rem;
