@@ -59,7 +59,7 @@ require 'scripts/helpers/importa.php';
     <header>
         <div class="HeaderContainer">
             <div class="headerText">
-            <h1 class="header__text-logo">La Piazza</h1>
+                <h1 class="header__text-logo">La Piazza</h1>
             </div>
             <div class="headerContainer__img">
                 <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
@@ -96,8 +96,14 @@ require 'scripts/helpers/importa.php';
                         <div class="produtos">
                             <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
                             <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                            <p class="produtos__info"><?= $produto['descricao'] ?> </p>
-                            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
+                            <div class="produtos__info d-flex justify-content-between align-items-center">
+                                <p class="flex-shrink-1 mb-0"> 
+                                    <?= $produto['descricao'] ?>
+                                </p>
+                                <p class=" produtos__preco flex-shrink-0">
+                                    R$ <?= $produto['valor'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -105,7 +111,7 @@ require 'scripts/helpers/importa.php';
             </div>
         </div>
 
-        <div class="cardapio__container container my-5 p-4">
+        <div class=" cardapio__container container my-5 p-4">
             <h1 class="display-2">Todas pizzas</h1>
             <div class="row g-3">
                 <?php
