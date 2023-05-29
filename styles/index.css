@@ -120,8 +120,8 @@ main {
     flex-direction: column;
     align-items: center;
 
-    max-height: 20rem;
-    max-width: 10rem;
+    min-height: 28rem;
+    /* max-width: 10rem; */
     overflow: auto;
 }
 

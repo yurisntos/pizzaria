@@ -28,19 +28,18 @@ require 'scripts/helpers/importa.php';
         }
 
         .cardapio__preco {
-            margin-left: 10px;
+            
         }
 
         .cardapio__info {
-            margin-left: 10px;
+            
         }
 
         .cardapio__nome {
             font-size: large;
-            margin-left: 9px;
             border: 1px solid white;
             width: fit-content;
-            padding: 5px;
+            padding: 10px 0px;
             border-radius: 17px;
         }
 
@@ -119,17 +118,17 @@ require 'scripts/helpers/importa.php';
                 $produtos = listaDados('SELECT * FROM produtos');
 
                 foreach ($produtos as $produto) { ?>
-                    <div class="col col-sm-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="cardapio__produtos card p-2">
-                            <div class="imagem d-flex justify-content-center">
+                            <div class="w-100 text-center">
                                 <img src="assepts/pizzaMenor2.jpeg" class="img-fluid" alt="pizza">
                             </div>
                             <div class="cardapio_title">
-                                <p class="cardapio__nome fw-bold"><?= $produto['nome'] ?> </p>
+                                <p class="cardapio__nome fw-bold mb-0"><?= $produto['nome'] ?> </p>
                             </div>
-                            <div class="cardapio__text-infos">
-                                <p class="cardapio__info"><?= $produto['descricao'] ?></p>
-                                <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
+                            <div class="cardapio__text-infos flex-grow-1 w-100 d-flex flex-column justify-content-between">
+                                <p class="cardapio__info mb-0"><?= $produto['descricao'] ?></p>
+                                <p class="cardapio__preco ms-auto">R$ <?= $produto['valor'] ?></p>
                             </div>
                         </div>
                     </div>
