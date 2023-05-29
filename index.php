@@ -28,19 +28,18 @@ require 'scripts/helpers/importa.php';
         }
 
         .cardapio__preco {
-            margin-left: 10px;
+            
         }
 
         .cardapio__info {
-            margin-left: 10px;
+            
         }
 
         .cardapio__nome {
             font-size: large;
-            margin-left: 9px;
             border: 1px solid white;
             width: fit-content;
-            padding: 5px;
+            padding: 10px 0px;
             border-radius: 17px;
         }
 
@@ -58,13 +57,13 @@ require 'scripts/helpers/importa.php';
     </style>
     <header>
         <div class="HeaderContainer">
+            <div class="headerText">
+            <h1 class="header__text-logo">La Piazza</h1>
+            </div>
             <div class="headerContainer__img">
                 <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
             </div>
-            <div class="headerText">
-                <h1 class="header__text-logo">La Piazza</h1>
-            </div>
-            
+
             <nav>
                 <ul class="navMenu">
                     <li class="navMenu__container">
@@ -96,8 +95,14 @@ require 'scripts/helpers/importa.php';
                         <div class="produtos">
                             <h2 class="produtos__nome"><?= $produto['nome'] ?> </h2>
                             <img src="assepts/pizzaMenor2.jpeg" class="produtos__img--pizza" alt="pizza">
-                            <p class="produtos__info"><?= $produto['descricao'] ?> </p>
-                            <p class="produtos__preco">R$ <?= $produto['valor'] ?></p>
+                            <div class="produtos__info d-flex justify-content-between align-items-center">
+                                <p class="flex-shrink-1 mb-0"> 
+                                    <?= $produto['descricao'] ?>
+                                </p>
+                                <p class=" produtos__preco flex-shrink-0">
+                                    R$ <?= $produto['valor'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -105,7 +110,7 @@ require 'scripts/helpers/importa.php';
             </div>
         </div>
 
-        <div class="cardapio__container container my-5 p-4">
+        <div class=" cardapio__container container my-5 p-4">
             <h1 class="display-2">Todas pizzas</h1>
             <div class="row g-3">
                 <?php
@@ -113,17 +118,17 @@ require 'scripts/helpers/importa.php';
                 $produtos = listaDados('SELECT * FROM produtos');
 
                 foreach ($produtos as $produto) { ?>
-                    <div class="col col-sm-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="cardapio__produtos card p-2">
-                            <div class="imagem d-flex justify-content-center">
+                            <div class="w-100 text-center">
                                 <img src="assepts/pizzaMenor2.jpeg" class="img-fluid" alt="pizza">
                             </div>
                             <div class="cardapio_title">
-                                <p class="cardapio__nome fw-bold"><?= $produto['nome'] ?> </p>
+                                <p class="cardapio__nome fw-bold mb-0"><?= $produto['nome'] ?> </p>
                             </div>
-                            <div class="cardapio__text-infos">
-                                <p class="cardapio__info"><?= $produto['descricao'] ?></p>
-                                <p class="cardapio__preco">R$ <?= $produto['valor'] ?></p>
+                            <div class="cardapio__text-infos flex-grow-1 w-100 d-flex flex-column justify-content-between">
+                                <p class="cardapio__info mb-0"><?= $produto['descricao'] ?></p>
+                                <p class="cardapio__preco ms-auto">R$ <?= $produto['valor'] ?></p>
                             </div>
                         </div>
                     </div>
