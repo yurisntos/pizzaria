@@ -8,7 +8,7 @@ require 'scripts/helpers/importa.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projeto</title>
+    <title>La Piazza </title>
     <link rel="stylesheet" href="styles/globais.css">
     <link rel="stylesheet" href="styles/index.css">
 
@@ -58,13 +58,13 @@ require 'scripts/helpers/importa.php';
     </style>
     <header>
         <div class="HeaderContainer">
-            <div class="headerText">
-            <h1 class="header__text-logo">La Piazza</h1>
-            </div>
             <div class="headerContainer__img">
                 <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
             </div>
-
+            <div class="headerText">
+                <h1 class="header__text-logo">La Piazza</h1>
+            </div>
+            
             <nav>
                 <ul class="navMenu">
                     <li class="navMenu__container">

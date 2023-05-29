@@ -46,6 +46,7 @@ header{
 .header__text-logo{
     color: white;
     font-family: 'Climate Crisis', cursive;
+    font-size: 2rem;
 }
 nav{
     display: flex;
