@@ -57,12 +57,16 @@ require 'scripts/helpers/importa.php';
     </style>
     <header>
         <div class="HeaderContainer">
-            <div class="headerText">
-            <h1 class="header__text-logo">La Piazza</h1>
-            </div>
-            <div class="headerContainer__img">
-                <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
-            </div>
+
+            <div class="side">
+                <div class="headerContainer__img">
+                    <img src="assepts/pizza icon.png" alt="pizza" class="header__img--icon">
+                </div>
+
+                <div class="headerText">
+                <h1 class="header__text-logo">La Piazza</h1>
+                </div>
+            </div>   
 
             <nav>
                 <ul class="navMenu">
@@ -141,16 +145,18 @@ require 'scripts/helpers/importa.php';
     <footer>
         <div id="footer__container">
             <div class="footer__txt">
-                <p class="footer__txt--principal">Contate-nos</p>
-                <p class="footer__txt--secondtxt">Fique a vontade para entrar em contato conosco. <br>Estamos sempre abertos para discutir novos projetos<br> ideias criativas ou oportunidades de fazer parte de suas visões.</p>
+                <h1 class="footer__txt--principal">Contate-nos</h1>
+                <p class="footer__txt--secondtxt">Fique a vontade para entrar em contato conosco.Estamos sempre abertos para discutir novos projetos ideias criativas ou oportunidades de fazer parte de suas visões.</p>
             </div>
-            <div class="footer__email">
-                <h2 class="footer__email--title">Envie-nos</h2>
-                <img src="assepts/o-email.png" alt="iconEmail" class="footer__email--img">
-            </div>
-            <div class="footer__telefone">
-                <h2 class="footer__telefone--title">Ligue para nós</h2>
-                <img src="assepts/telefone.png" alt="iconTel" class="footer__telefone--img">
+            <div class="banner">
+                <div class="footer__email">
+                    <p class="footer__email--title">Envie-nos</p>
+                    <img src="assepts/o-email.png" alt="iconEmail" class="footer__email--img">
+                </div>
+                <div class="footer__telefone">
+                    <p class="footer__telefone--title">Ligue para nós</p>
+                    <img src="assepts/telefone.png" alt="iconTel" class="footer__telefone--img">
+                </div>
             </div>
         </div>
 
