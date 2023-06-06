@@ -19,6 +19,12 @@
           Usuários
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= buscaUrl('admin/contato/listaContato.php') ?>">
+          <span data-feather="users" class="align-text-bottom"></span>
+          Contatos
+        </a>
+      </li>
 
       <!--
           <li class="nav-item">

@@ -81,18 +81,23 @@ main {
     flex-direction: column;
     background-color: #fffe4b;
 }
+.produtos__container-title{
+    margin-top: 1rem;
+}
+
 .produtosdestaque{
     display: flex;
     justify-content: space-between;
       
 }
 .produtos {
-    box-shadow: 1px 1px 4px #bc8b07;;
+   
     display: flex;
     gap: 1rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+
+    box-shadow: 1px 1px 4px #bc8b07;
     background-color: #ffb20052;
     min-height: 35rem;
 }
@@ -106,7 +111,7 @@ main {
     margin: auto;
 }
 .produtos__img--pizza:hover {
-    border: 6px solid red;
+    border: 6px solid  #B60000;
 }
 
 .produtos__info{
@@ -120,6 +125,31 @@ main {
     font-size: 2rem;
     
 }
+
+.container__info {
+    display: flex;
+    width: 100%;
+    
+    margin-top: 2rem;
+    padding: 10px;
+}
+.container__info-text {
+    width: 50%;
+}
+.container__info-img{
+    width: 45%;
+}
+.img-info {
+    width: 80%;
+    height: 100%;
+
+}
+
+.info__text {
+    height: 18rem;
+    overflow: auto;
+}
+
 .cardapio-section{
     display: flex;
     flex-direction: column;
@@ -184,6 +214,7 @@ div#footer__container {
     flex-direction: column;
     align-items: stretch;
     width: 26rem;
+    justify-content: space-between;
 }
 
 .footer__txt--principal {
@@ -218,6 +249,9 @@ div#footer__container {
     cursor: pointer;
     
 }
+.footer__email--title {
+    width: 100px;
+}
 
 .footer__telefone{
     display: flex;
@@ -251,9 +285,9 @@ form {
     width: 28rem;
 }
 .tituloForm{
-        background-color: yellow;
-        
-        text-align: center;
+    padding: 5px;
+    background-color: yellow;  
+    text-align: center;
         
 
 }

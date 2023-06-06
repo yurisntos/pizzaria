@@ -12,7 +12,7 @@
 
     function buscaUrl($arquivo)
     {
-        $url = 'http://localhost:84/projeto%202023/pizzaria/';
+        $url = 'http://pizzaria.test:84/';
 
         return $url . $arquivo;
     }

@@ -9,21 +9,21 @@ CREATE TABLE produtos (
     descricao TEXT NULL,
     imagem VARCHAR(255) NULL
 ); 
-CREATE TABLE pedidos (
-    idpedidos INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    cliente_id INT NOT NULL,
-    total DECIMAL(10,2),
-    data_pedido DATE NOT NULL
-);
+-- CREATE TABLE pedidos (
+--     idpedidos INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+--     cliente_id INT NOT NULL,
+--     total DECIMAL(10,2),
+--     data_pedido DATE NOT NULL
+-- );
 
-CREATE TABLE itenspedidos (
-    iditenspedidos INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    produto_id INT NOT NULL,
-    pedido_id INT NOT NULL, 
-    quantidade INT NOT NULL, 
-    observacao TEXT NULL,
-    valor DECIMAL(10,2) NOT NULL
-);
+-- CREATE TABLE itenspedidos (
+--     iditenspedidos INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+--     produto_id INT NOT NULL,
+--     pedido_id INT NOT NULL, 
+--     quantidade INT NOT NULL, 
+--     observacao TEXT NULL,
+--     valor DECIMAL(10,2) NOT NULL
+-- );
 
 CREATE TABLE administrador (
     idadm INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -32,12 +32,11 @@ CREATE TABLE administrador (
     senha VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE usuario(
+CREATE TABLE usuario (
     iduser INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(20) NOT NULL, 
-    email TEXT NULL, 
-    senha VARCHAR(50) NOT NULL
-    
+    nome VARCHAR(255) NOT NULL, 
+    email VARCHAR(255) DEFAULT NULL, 
+    telefone VARCHAR(20) NOT NULL
 );
 
 INSERT INTO produtos ( nome, descricao, valor)
