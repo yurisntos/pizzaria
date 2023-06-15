@@ -1,5 +1,5 @@
 <?php
-    include "../../scripts/helpers/importa.php"; 
+    include "../funcoes.php";
 
     $nome = $_POST["nome"]; 
     $email = $_POST["email"]; 
@@ -22,9 +22,9 @@
     
     $id = $pdo->lastInsertId();
     if($id > 0) {
-        header("Location: index.php");
+        header("Location: " . buscaUrl("index.php"));
 
     } else { 
-        header("Location: index.php"); 
+        header("Location:" . buscaUrl("index.php")); 
     }
     exit; 

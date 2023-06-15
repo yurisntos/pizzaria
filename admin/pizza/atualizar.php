@@ -5,9 +5,9 @@
     $nome = $_POST["nome"];
     $valor = $_POST["valor"];
     $descricao = $_POST["descricao"];
-    $ingredientes = $_POST["ingredientes"];
 
-    $sql = "UPDATE produtos SET nome = :nome, valor = :valor, descricao = :descricao, ingredientes = :ingredientes WHERE idprodutos = :id";
+
+    $sql = "UPDATE produtos SET nome = :nome, valor = :valor, descricao = :descricao WHERE idprodutos = :id";
     
     $resultado = $pdo->prepare($sql); 
     

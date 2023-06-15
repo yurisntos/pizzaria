@@ -30,30 +30,27 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-header{
+.header{
     border-bottom: 5px solid rgb(12, 109, 12);
     background-color:#B60000;
-    padding: 10px;
-}
-.HeaderContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .side {
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
 }
 .header__img--icon{
-    width: 100px;
+    width: 50px;
 }
 .header__text-logo{
-    color: white;
+    color:white;
     font-family: 'Climate Crisis', cursive;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
-.navMenu{
+/* .navMenu{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +71,7 @@ header{
 
 .navMenu__link:hover{
     background-color: yellow
-}
+} */
 
 main {
     display: flex;
@@ -82,7 +79,9 @@ main {
     background-color: #fffe4b;
 }
 .produtos__container-title{
-    margin-top: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 800;
 }
 
 .produtosdestaque{
@@ -132,12 +131,15 @@ main {
     
     margin-top: 2rem;
     padding: 10px;
+    justify-content: center;
 }
+
 .container__info-text {
     width: 50%;
 }
 .container__info-img{
     width: 45%;
+    text-align: center;
 }
 .img-info {
     width: 80%;
@@ -205,7 +207,7 @@ footer{
     background: -moz-linear-gradient(62deg,#b60000 0%, #f47d0a 90%);
     border-top: 8px solid rgb(12, 109, 12);
     padding: 10px;
-    gap: 2rem;
+   
     
         
 }
@@ -213,7 +215,7 @@ div#footer__container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: 26rem;
+
     justify-content: space-between;
 }
 
@@ -222,12 +224,14 @@ div#footer__container {
     color: black;
     text-align: center;
 }
+
 .footer__txt--secondtxt{
     color: white;
+    margin-top: 3rem;
 }
+
 .footer__email--img{
-    max-width: 25px;
-    margin: 5px;
+    width: 2rem;
 }
 .footerTxt{
     line-height: 20px;
@@ -281,15 +285,10 @@ div#footer__container {
     font-weight: 800;
 }
 
-form {
-    width: 28rem;
-}
 .tituloForm{
     padding: 5px;
     background-color: yellow;  
     text-align: center;
-        
-
 }
 
 .inputStyle {
@@ -311,7 +310,32 @@ form {
     margin-bottom: 5px;
     
 }
-/*
+
+/* @media (max-width: 400px) {
+    .header__text-logo {
+    font-size: 1rem;
+    }
+    .img-info {
+        width: 100%;
+        height: 60%;
+    }
+    form {
+        width: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tituloForm {
+        font-size: 1rem;
+    }
+    .inputFooter {
+        display: flex;
+        flex-direction: column;
+        height: 25rem;
+        justify-content: space-between;
+    }
+} */
+    /*
 @media (min-width:750px){
     .HeaderContainer {
         display: flex;
